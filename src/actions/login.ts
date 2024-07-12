@@ -4,8 +4,6 @@ import { TOKEN_POST } from "@/utils/api";
 import apiError from "@/utils/apiError";
 import { cookies } from "next/headers";
 
-const API_URL = "https://dogsapi.origamid.dev/json";
-
 export default async function login(state: {}, formData: FormData) {
   const username = formData.get("username");
   const password = formData.get("password");

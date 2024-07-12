@@ -8,8 +8,6 @@ import { useEffect } from "react";
 import styles from "./LoginForm.module.css";
 import userPost from "@/actions/userPost";
 
-type Props = {};
-
 const FormButton = () => {
   const { pending } = useFormStatus();
 
@@ -24,7 +22,7 @@ const FormButton = () => {
   );
 };
 
-export const LoginCreateForm = (props: Props) => {
+export const LoginCreateForm = () => {
   const [state, action] = useFormState(userPost, {
     ok: false,
     error: "",

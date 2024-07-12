@@ -1,14 +1,21 @@
+import { LoginForgotForm } from "@/components/login/LoginForgotForm";
 import { Metadata } from "next";
-
-type ForgotPageProps = {};
 
 export const metadata: Metadata = {
   title: "Forgot | Dogs",
   description: "Recover your password",
 };
 
-const ForgotPage = (props: ForgotPageProps) => {
-  return <div>Forgot</div>;
+// one way to dynamically import files with browser api
+export const dynamic = "force-dynamic";
+
+const ForgotPage = () => {
+  return (
+    <div className="animeLeft">
+      <h1 className="title">Forgot password?</h1>
+      <LoginForgotForm />
+    </div>
+  );
 };
 
 export default ForgotPage;

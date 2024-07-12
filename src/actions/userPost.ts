@@ -1,10 +1,8 @@
 "use server";
 
-import { TOKEN_POST, USER_POST } from "@/utils/api";
+import { USER_POST } from "@/utils/api";
 import apiError from "@/utils/apiError";
 import login from "./login";
-
-const API_URL = "https://dogsapi.origamid.dev/json";
 
 export default async function userPost(state: {}, formData: FormData) {
   const username = formData.get("username");
