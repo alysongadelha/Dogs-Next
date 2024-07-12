@@ -38,8 +38,8 @@ export const LoginForm = (props: Props) => {
   return (
     <>
       <form action={action} className={styles.form}>
-        <Input label="Password" type="text" name="username" />
-        <Input label="User" type="password" name="password" />
+        <Input label="User" type="text" name="username" />
+        <Input label="Password" type="password" name="password" />
         <ErrorMessage error={state.error} />
         <FormButton />
       </form>
