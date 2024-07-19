@@ -1,7 +1,7 @@
 "use server";
 
 import { PASSWORD_RESET } from "@/utils/api";
-import apiError from "@/utils/apiError";
+import apiError from "@/utils/api-error";
 import { redirect } from "next/navigation";
 
 export default async function passwordReset(state: {}, formData: FormData) {

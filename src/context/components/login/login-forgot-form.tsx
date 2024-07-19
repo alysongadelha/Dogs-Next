@@ -3,9 +3,9 @@
 import { useFormState, useFormStatus } from "react-dom";
 import { Button } from "../forms/Button";
 import { Input } from "../forms/Input";
-import { ErrorMessage } from "../helper/errorMessage";
-import styles from "./LoginForm.module.css";
-import passwordLost from "@/actions/passwordLost";
+import { ErrorMessage } from "../helper/error-message";
+import styles from "./login-form.module.css";
+import passwordLost from "@/actions/password-lost";
 
 const FormButton = () => {
   const { pending } = useFormStatus();

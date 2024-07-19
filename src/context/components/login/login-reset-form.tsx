@@ -3,9 +3,9 @@
 import { useFormState, useFormStatus } from "react-dom";
 import { Button } from "../forms/Button";
 import { Input } from "../forms/Input";
-import { ErrorMessage } from "../helper/errorMessage";
-import styles from "./LoginForm.module.css";
-import passwordReset from "@/actions/passwordReset";
+import { ErrorMessage } from "../helper/error-message";
+import styles from "./login-form.module.css";
+import passwordReset from "@/actions/password-reset";
 
 type Props = {
   keyToken: string;

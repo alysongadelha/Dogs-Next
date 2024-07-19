@@ -1,8 +1,7 @@
 "use server";
 
-import { USER_GET, USER_POST } from "@/utils/api";
-import apiError from "@/utils/apiError";
-import login from "./login";
+import { USER_GET } from "@/utils/api";
+import apiError from "@/utils/api-error";
 import { cookies } from "next/headers";
 
 export type User = {

@@ -1,7 +1,7 @@
-import { Photo } from "@/actions/getPhotos";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./FeedPhotos.module.css";
+import styles from "./feed-photos.module.css";
+import { Photo } from "@/actions/get-photos";
 
 type Props = {
   photos: Photo[];

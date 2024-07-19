@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { type_second } from "@/utils/fonts";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { UserContextProvider } from "@/context/userContext";
-import userGet from "@/actions/getUser";
+import { UserContextProvider } from "@/context/user-context";
+import userGet from "@/actions/get-user";
+import { Header } from "@/context/components/Header";
+import { Footer } from "@/context/components/Footer";
 
 export const metadata: Metadata = {
   title: "Gods Next App",

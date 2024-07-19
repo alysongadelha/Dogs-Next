@@ -1,4 +1,4 @@
-import { LoginForgotForm } from "@/components/login/LoginForgotForm";
+import { LoginForgotForm } from "@/context/components/login/login-forgot-form";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -1,7 +1,5 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { Feed } from "@/components/feed/Feed";
-import getPhotos from "@/actions/getPhotos";
+import { Feed } from "@/context/components/feed/Feed";
+import getPhotos from "@/actions/get-photos";
 
 export default async function Home() {
   const data = await getPhotos();

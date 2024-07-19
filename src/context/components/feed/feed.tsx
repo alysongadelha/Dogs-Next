@@ -1,5 +1,5 @@
-import { Photo } from "@/actions/getPhotos";
-import { FeedPhotos } from "./FeedPhotos";
+import { Photo } from "@/actions/get-photos";
+import { FeedPhotos } from "./feed-photos";
 
 type Props = {
   photos: Photo[];

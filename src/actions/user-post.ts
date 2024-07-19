@@ -1,7 +1,7 @@
 "use server";
 
 import { USER_POST } from "@/utils/api";
-import apiError from "@/utils/apiError";
+import apiError from "@/utils/api-error";
 import login from "./login";
 
 export default async function userPost(state: {}, formData: FormData) {

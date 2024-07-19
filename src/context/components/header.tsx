@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./Header.module.css";
-import userGet from "@/actions/getUser";
+import styles from "./header.module.css";
+import userGet from "@/actions/get-user";
 
 export const Header = async () => {
   const { data } = await userGet();
