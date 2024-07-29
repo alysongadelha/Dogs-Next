@@ -30,7 +30,7 @@ export const LoginForm = () => {
   });
 
   useEffect(() => {
-    if (state.ok) window.location.href = "/profile";
+    if (state.ok) window.location.href = "/account";
   }, [state.ok]);
 
   return (

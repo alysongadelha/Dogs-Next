@@ -9,6 +9,8 @@ import { ToAddIcon } from "@/icons/to-add-icon";
 import { LeaveIcon } from "@/icons/leave-icon";
 import { FeedIcon } from "@/icons/feed-icon";
 import Link from "next/link";
+import logout from "@/actions/logout";
+import { useUser } from "@/context/user-context";
 
 const getTitle = (pathname: string) => {
   switch (pathname) {
@@ -22,6 +24,7 @@ const getTitle = (pathname: string) => {
 };
 export const AccountHeader = () => {
   const mobile = useMedia("(max-width: 40rem)");
+  const { setUserState } = useUser();
   const [mobileMenu, setMobileMenu] = React.useState(false);
 
   const pathname = usePathname();
@@ -29,8 +32,9 @@ export const AccountHeader = () => {
     setMobileMenu(false);
   }, [pathname]);
 
-  const handleLogout = () => {
-    // useLogout();
+  const handleLogout = async () => {
+    await logout();
+    setUserState(null);
   };
 
   return (
