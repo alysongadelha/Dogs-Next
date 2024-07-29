@@ -1,4 +1,4 @@
-import { Feed } from "@/context/components/feed/Feed";
+import { Feed } from "@/context/components/feed/feed";
 import getPhotos from "@/actions/get-photos";
 
 export default async function Home() {

@@ -3,8 +3,8 @@ import "./globals.css";
 import { type_second } from "@/utils/fonts";
 import { UserContextProvider } from "@/context/user-context";
 import userGet from "@/actions/get-user";
-import { Header } from "@/context/components/Header";
-import { Footer } from "@/context/components/Footer";
+import { Header } from "@/context/components/header";
+import { Footer } from "@/context/components/footer";
 
 export const metadata: Metadata = {
   title: "Gods Next App",
