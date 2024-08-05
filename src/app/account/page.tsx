@@ -1,14 +1,15 @@
-"use client";
-import { useUser } from "@/context/user-context";
+import { Metadata } from "next";
 
 type AccountPageProps = {};
 
-const AccountPage = (props: AccountPageProps) => {
-  const { user } = useUser();
+export const metaData: Metadata = {
+  title: "My Account",
+};
 
+const AccountPage = (props: AccountPageProps) => {
   return (
     <div>
-      <h1>Account: {user?.nome}</h1>
+      <h1>Account</h1>
     </div>
   );
 };

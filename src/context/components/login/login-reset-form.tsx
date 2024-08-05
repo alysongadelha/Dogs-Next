@@ -1,8 +1,8 @@
 "use client";
 
 import { useFormState, useFormStatus } from "react-dom";
-import { Button } from "../forms/Button";
-import { Input } from "../forms/Input";
+import { Button } from "../forms/button";
+import { Input } from "../forms/input";
 import { ErrorMessage } from "../helper/error-message";
 import styles from "./login-form.module.css";
 import passwordReset from "@/actions/password-reset";
