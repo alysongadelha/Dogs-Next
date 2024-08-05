@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { type_second } from "@/utils/fonts";
 import { UserContextProvider } from "@/context/user-context";
-import userGet from "@/actions/get-user";
+import getUser from "@/actions/get-user";
 import { Header } from "@/context/components/header";
 import { Footer } from "@/context/components/footer";
 
@@ -16,7 +16,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { data: user } = await userGet();
+  const { data: user } = await getUser();
 
   return (
     <html lang="en">

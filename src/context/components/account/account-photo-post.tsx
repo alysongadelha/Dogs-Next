@@ -4,9 +4,9 @@ import { useFormState, useFormStatus } from "react-dom";
 import { Button } from "../forms/button";
 import { Input } from "../forms/input";
 import { ErrorMessage } from "../helper/error-message";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./account-photo-post.module.css";
-import photoPost from "@/actions/photo-post";
+import photoPost from "@/actions/post-photos";
 
 const FormButton = () => {
   const { pending } = useFormStatus();

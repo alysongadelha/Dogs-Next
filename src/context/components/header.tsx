@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.css";
-import userGet from "@/actions/get-user";
+import getUser from "@/actions/get-user";
 
 export const Header = async () => {
-  const { data } = await userGet();
+  const { data } = await getUser();
   return (
     <header className={styles.header}>
       <nav className={`${styles.nav} container`}>
