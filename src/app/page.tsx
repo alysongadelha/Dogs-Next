@@ -1,4 +1,4 @@
-import { Feed } from "@/context/components/feed/feed";
+import { Feed } from "@/components/feed/feed";
 import getPhotos from "@/actions/get-photos";
 import Link from "next/link";
 

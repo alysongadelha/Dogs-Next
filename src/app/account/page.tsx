@@ -1,23 +1,23 @@
 import getPhotos from "@/actions/get-photos";
 import getUser from "@/actions/get-user";
-import { Feed } from "@/context/components/feed/feed";
+import { Feed } from "@/components/feed/feed";
 import { Metadata } from "next";
 import Link from "next/link";
 
 type AccountPageProps = {};
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: "My Account",
 };
 
 const AccountPage = async (props: AccountPageProps) => {
   const { data: user } = await getUser();
   const { data } = await getPhotos({ user: user?.username });
-  console.log("data", data);
+
   return (
-    <div>
+    <section>
       {data?.length ? (
-        <Feed photos={data} />
+        <Feed photos={data} user={user?.username} />
       ) : (
         <div>
           <p
@@ -34,7 +34,7 @@ const AccountPage = async (props: AccountPageProps) => {
           </Link>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

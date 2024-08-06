@@ -1,4 +1,4 @@
-import { AccountHeader } from "@/context/components/account/account-header";
+import { AccountHeader } from "@/components/account/account-header";
 
 type Props = {
   children: React.ReactNode;

@@ -1,9 +1,9 @@
-import { AccountPhotoPost } from "@/context/components/account/account-photo-post";
+import { AccountPhotoPost } from "@/components/account/account-photo-post";
 import { Metadata } from "next";
 
 type PostPageProps = {};
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: "Posts | My Account",
 };
 

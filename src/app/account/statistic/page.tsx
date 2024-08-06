@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 type StatisticPageProps = {};
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: "Statistic | My Account",
 };
 

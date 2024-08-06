@@ -1,4 +1,4 @@
-import { LoginResetForm } from "@/context/components/login/login-reset-form";
+import { LoginResetForm } from "@/components/login/login-reset-form";
 import { Metadata } from "next";
 
 type Props = {
