@@ -1,11 +1,34 @@
+import getPhoto from "@/actions/get-photo";
+import { PhotoContent } from "@/components/photo/photo-content";
+import { notFound } from "next/navigation";
+
 type PhotoIdPageProps = {
   params: {
-    id: number;
+    id: string;
   };
 };
 
-const PhotoIdPage = ({ params: { id } }: PhotoIdPageProps) => {
-  return <div>Photo id: {id}</div>;
+export async function generateMetadata({ params: { id } }: PhotoIdPageProps) {
+  const { data } = await getPhoto(id);
+
+  if (!data)
+    return {
+      title: "Photos",
+    };
+
+  return {
+    title: data.photo.title,
+  };
+}
+
+const PhotoIdPage = async ({ params: { id } }: PhotoIdPageProps) => {
+  const { data } = await getPhoto(id);
+  if (!data) return notFound();
+  return (
+    <section className="container mainContainer">
+      <PhotoContent data={data} single={true} />
+    </section>
+  );
 };
 
 export default PhotoIdPage;
