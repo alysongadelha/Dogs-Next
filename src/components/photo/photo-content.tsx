@@ -3,9 +3,9 @@
 import styles from "./photo-content.module.css";
 import Link from "next/link";
 import { useUser } from "@/context/user-context";
-import { PhotoDelete } from "./photo-delete";
 import Image from "next/image";
 import { PhotoData } from "@/actions/get-photo";
+import { PhotoDelete } from "./photo-delete";
 
 type Props = {
   data: PhotoData;
@@ -29,7 +29,6 @@ export const PhotoContent = ({ data, single }: Props) => {
             ) : (
               <Link href={`/perfil/${photo.author}`}>@{photo.author}</Link>
             )}
-
             <span className={styles.visualization}>{photo.acessos}</span>
           </p>
           <h1 className="title">

@@ -6,7 +6,7 @@ import { Input } from "../forms/input";
 import { ErrorMessage } from "../helper/error-message";
 import { useEffect } from "react";
 import styles from "./login-form.module.css";
-import userPost from "@/actions/user-post";
+import postUser from "@/actions/user-post";
 
 const FormButton = () => {
   const { pending } = useFormStatus();
@@ -23,7 +23,7 @@ const FormButton = () => {
 };
 
 export const LoginCreateForm = () => {
-  const [state, action] = useFormState(userPost, {
+  const [state, action] = useFormState(postUser, {
     ok: false,
     error: "",
     data: null,

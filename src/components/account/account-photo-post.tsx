@@ -6,7 +6,7 @@ import { Input } from "../forms/input";
 import { ErrorMessage } from "../helper/error-message";
 import { useState } from "react";
 import styles from "./account-photo-post.module.css";
-import photoPost from "@/actions/post-photos";
+import postPhoto from "@/actions/post-photos";
 
 const FormButton = () => {
   const { pending } = useFormStatus();
@@ -23,7 +23,7 @@ const FormButton = () => {
 };
 
 export const AccountPhotoPost = () => {
-  const [state, action] = useFormState(photoPost, {
+  const [state, action] = useFormState(postPhoto, {
     ok: false,
     error: "",
     data: null,
@@ -35,7 +35,7 @@ export const AccountPhotoPost = () => {
     if (target.files) setImg(URL.createObjectURL(target.files[0]));
   };
   return (
-    <section className={`${styles.photoPost} animeLeft`}>
+    <section className={`${styles.postPhoto} animeLeft`}>
       <form action={action}>
         <Input label="Name" type="text" name="nome" />
         <Input label="Weight" type="number" name="peso" />

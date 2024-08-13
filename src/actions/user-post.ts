@@ -4,7 +4,7 @@ import { USER_POST } from "@/utils/api";
 import apiError from "@/utils/api-error";
 import login from "./login";
 
-export default async function userPost(state: {}, formData: FormData) {
+export default async function postUser(state: {}, formData: FormData) {
   const username = formData.get("username");
   const email = formData.get("email");
   const password = formData.get("password") as string;

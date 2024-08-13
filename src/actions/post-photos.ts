@@ -6,7 +6,7 @@ import { revalidateTag } from "next/cache";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export default async function photoPost(state: {}, formData: FormData) {
+export default async function postPhoto(state: {}, formData: FormData) {
   const token = cookies().get("token")?.value;
   const nome = formData.get("nome");
   const idade = formData.get("idade");
