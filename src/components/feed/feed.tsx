@@ -2,6 +2,8 @@
 import getPhotos, { Photo } from "@/actions/get-photos";
 import { FeedPhotos } from "./feed-photos";
 import { useEffect, useRef, useState } from "react";
+import { Loading } from "../helper/loading";
+import styles from "./feed.module.css";
 
 type Props = {
   photos: Photo[];
@@ -67,7 +69,9 @@ export const Feed = ({ photos, user }: Props) => {
   return (
     <div>
       <FeedPhotos photos={photos} />
-      {loading && <p>Loading...</p>}
+      <div className={styles.loadingWrapper}>
+        {infinite ? loading && <Loading /> : <p>There are no more posts</p>}
+      </div>
     </div>
   );
 };

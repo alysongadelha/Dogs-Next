@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./feed-photos.module.css";
+import styles from "./feed.module.css";
 import { Photo } from "@/actions/get-photos";
 
 type Props = {
