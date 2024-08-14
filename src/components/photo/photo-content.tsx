@@ -1,11 +1,12 @@
 "use client";
-// import PhotoComments from "./PhotoComments";
+
 import styles from "./photo-content.module.css";
 import Link from "next/link";
 import { useUser } from "@/context/user-context";
 import Image from "next/image";
 import { PhotoData } from "@/actions/get-photo";
 import { PhotoDelete } from "./photo-delete";
+import { PhotoComments } from "./photo-comments";
 
 type Props = {
   data: PhotoData;
@@ -40,7 +41,7 @@ export const PhotoContent = ({ data, single }: Props) => {
           </ul>
         </div>
       </div>
-      {/* <PhotoComments single={single} id={photo.id} comments={comments} /> */}
+      <PhotoComments single={single} id={photo.id} comments={comments} />
     </div>
   );
 };
