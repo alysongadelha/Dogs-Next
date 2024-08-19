@@ -16,7 +16,7 @@ const FormButton = () => {
       {pending ? (
         <Button disabled={pending}>Submitting...</Button>
       ) : (
-        <Button>Sign up</Button>
+        <Button>Post</Button>
       )}
     </>
   );

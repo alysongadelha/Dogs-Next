@@ -15,7 +15,7 @@ export default async function postPhoto(state: {}, formData: FormData) {
 
   try {
     if (!nome || !idade || !peso || img.size === 0)
-      throw new Error("Fill all fields.");
+      throw new Error("Fill in all fields.");
 
     if (!token) throw new Error("You must be logged");
     const { url } = PHOTO_POST();
