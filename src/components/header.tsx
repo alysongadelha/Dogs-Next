@@ -18,7 +18,7 @@ export const Header = async () => {
           />
         </Link>
         {data ? (
-          <Link className={styles.login} href={"/profile"}>
+          <Link className={styles.login} href={"/account"}>
             {data.username}
           </Link>
         ) : (

@@ -1,4 +1,4 @@
-import styles from "./login.module.css";
+import "./login.css";
 
 type Props = {
   children: React.ReactNode;
@@ -6,8 +6,8 @@ type Props = {
 
 const LoginLayout = ({ children }: Props) => {
   return (
-    <main className={styles.login}>
-      <div className={styles.forms}>{children}</div>
+    <main className="login">
+      <div className="forms">{children}</div>
     </main>
   );
 };
