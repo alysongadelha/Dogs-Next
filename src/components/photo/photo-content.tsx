@@ -28,7 +28,7 @@ export const PhotoContent = ({ data, single }: Props) => {
             {user && user.username === photo.author ? (
               <PhotoDelete id={String(photo.id)} />
             ) : (
-              <Link href={`/perfil/${photo.author}`}>@{photo.author}</Link>
+              <Link href={`/profile/${photo.author}`}>@{photo.author}</Link>
             )}
             <span className={styles.visualization}>{photo.acessos}</span>
           </p>
