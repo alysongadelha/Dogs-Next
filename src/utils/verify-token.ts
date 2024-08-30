@@ -5,15 +5,9 @@ export const verifyToken = async (token: string): Promise<boolean> => {
 
   try {
     // Verify the token
-    // await jwtVerify(
-    //   token,
-    //   new TextEncoder().encode(
-    //     "add-here-your-env-variable-with-the-encoder-string"
-    //   ),
-    //   {
-    //     algorithms: ["HS256", "HS384", "HS512", "HS512"],
-    //   }
-    // );
+    // await jwtVerify(token, new TextEncoder().encode(process.env.JWT_SALT), {
+    //   algorithms: ["HS256", "HS384", "HS512", "HS512"],
+    // });
     return true;
   } catch (error) {
     return false;
