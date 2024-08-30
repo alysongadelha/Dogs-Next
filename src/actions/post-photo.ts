@@ -1,6 +1,6 @@
 "use server";
 
-import { PHOTO_POST, USER_POST } from "@/utils/api";
+import { PHOTO_POST } from "@/utils/api";
 import apiError from "@/utils/api-error";
 import { revalidateTag } from "next/cache";
 import { cookies } from "next/headers";
@@ -18,6 +18,7 @@ export default async function postPhoto(state: {}, formData: FormData) {
       throw new Error("Fill in all fields.");
 
     if (!token) throw new Error("You must be logged");
+
     const { url } = PHOTO_POST();
     const response = await fetch(url, {
       method: "POST",
@@ -27,7 +28,7 @@ export default async function postPhoto(state: {}, formData: FormData) {
       body: formData,
     });
 
-    if (!response.ok) throw new Error("User or Email already exist.");
+    if (!response.ok) throw new Error("An error occurs.");
   } catch (error: unknown) {
     return apiError(error);
   }
